@@ -40,7 +40,8 @@
 
 # R
 ## adapt path to your system 
-mainpath = "~/bgc/2018_DiurnalEvaporation/"
+# mainpath = "~/bgc/github/laubblatt/2018_DiurnalEvaporation/"
+mainpath = "./"
 setwd(mainpath)
 pinputdata = paste0(mainpath,"data/") 
 pfig = paste0(mainpath,"figures/")

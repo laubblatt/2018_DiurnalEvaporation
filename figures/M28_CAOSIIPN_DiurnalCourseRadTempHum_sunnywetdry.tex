@@ -1,0 +1,30 @@
+% @filename M28_CAOSIIPN_DiurnalCourseRadTempHum_sunnywetdry.tex
+% fig 04 of HESSD
+% last edit @20180423
+
+
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[percent]{overpic}
+
+\begin{document}
+\thispagestyle{empty} %Please, no page numbers or similar
+
+
+% \begin{overpic}[width=0.45\textwidth,tics=10,trim= 0  0 0 0,clip]{dTsavgdRld_Spatial_Temporal_landocean_scatterplot_dCO2.pdf}
+%  \put (1,50) { a)}
+% \end{overpic}
+% \begin{overpic}[width=0.45\textwidth,tics=10,trim= 0  0 0 0,clip]{dTsRluavg_dRin_Spatial_Temporal_landocean_scatterplot.pdf}
+%  \put (1,50) { b)}
+% \end{overpic}
+
+
+\begin{overpic}[height = 6cm, tics=10]{fig04a_CAOSIIPN_RadiationFluxes_Diurnal_sunnywetdry_lines.pdf}
+ \put (0,95) {\bfseries\sffamily (a)}
+\end{overpic} \quad \quad
+\begin{overpic}[height = 6cm, tics=10]{fig04b_CAOSIIPN_TempsVaporPressure_Diurnal_sunnywetdry_lines.pdf}
+ \put (-2,85) {\bfseries\sffamily (b)}
+\end{overpic}
+
+\end{document}

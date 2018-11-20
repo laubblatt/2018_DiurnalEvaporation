@@ -1,0 +1,21 @@
+% @filename M28_sketch_panels.tex
+% fig 01 of HESSD
+% last edit @20180423
+
+
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[percent]{overpic}
+
+\begin{document}
+\thispagestyle{empty} %Please, no page numbers or similar
+
+% run pdfcrop on HysteresisLoopSketch.pdf from keynote before pdflatex
+\hskip-2cm
+\begin{overpic}[height = 6cm, tics=10]{HysteresisLoopSketch.pdf}
+ \put (0,34) {\bfseries\sffamily  \Large (a)}
+ \put (52,34) {\bfseries\sffamily \Large  (b)}
+\end{overpic}
+
+\end{document}

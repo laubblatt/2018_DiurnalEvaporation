@@ -1,6 +1,7 @@
 # Reproduce figures and tables of Renner et al., 2018
 
-**_By Maik Renner, Max-Planck Institute for Biogeochemistry, Jena, Germany 2018-11-15_**
+**_By Maik Renner, Max-Planck Institute for Biogeochemistry, Jena, Germany_**
+> 2018-11-15
 
 This repository provides the R script to perform data analysis and reproduce
 figures and tables as shown in the scientific manuscript
