@@ -33,9 +33,7 @@
 #' @version v1.05 2018-10-23 write data for fig12 to csv
 #' @version v1.10 2018-11-15 clean script and linked to package phaselag for all functions 
 #' @version v1.10 2018-11-15 prepare for github.com/laubblatt/2018_DiurnalEvaporation
-
-
-#' @TODO use datasets from doi GFZ
+#' @version v1.11 2019-01-15 download datasets from doi GFZ
 
 
 # R
@@ -43,13 +41,27 @@
 # mainpath = "~/bgc/github/laubblatt/2018_DiurnalEvaporation/"
 mainpath = "./"
 setwd(mainpath)
+getwd()
 pinputdata = paste0(mainpath,"data/") 
 pfig = paste0(mainpath,"figures/")
 pout = paste0(mainpath,"output/")
 
-## download data into directoy pinputdata 
+## download data into directoy pinputdata if it does not exist
+if (! file.exists(paste0(pinputdata,"dtseb_Mod.csv"))) { 
+  # model data
+  URLmodeldata <- "http://escidoc.gfz-potsdam.de/ir/item/escidoc:3501893/components/component/escidoc:3539905/content"
+  zipmodeldata = paste0(pinputdata,"data_models.zip")
+  download.file(URLmodeldata, destfile = zipmodeldata, method="curl")
+  unzip(zipmodeldata,exdir=pinputdata) 
+  # obs data 
+  URLobsdata <- "http://escidoc.gfz-potsdam.de/ir/item/escidoc:3539904/components/component/escidoc:3539906/content"
+  zipobsdata = paste0(pinputdata,"data_obs.zip")
+  download.file(URLobsdata, destfile = zipobsdata, method="curl")
+  unzip(zipobsdata,exdir=pinputdata) 
+  list.files(pinputdata)
+}
 
-### source this file to createall figures   
+### source this file to createall figures ####  
 #source(paste0(mainpath,"R/DiurnalEvaporation_CAOS_SEBsite.r"))
 
 library(data.table)
@@ -60,8 +72,10 @@ library(knitr) # kable()
 library(kableExtra)
 
 ## package which comes with the paper and contains all functions
-# library(devtools)
-# install_github("laubblatt/phaselag")
+if (!require("phaselag")) { 
+  library(devtools)
+  install_github("laubblatt/phaselag")
+}
 library(phaselag)
 
 # phaselag::anomean(rnorm(19))

@@ -9,6 +9,7 @@
 #' @version 1.01 20180917 remove the figure folder code in tex files
 #' @version 1.02 20180918 get figures do labeling croping and move final figures to folder manuscript_revised
 #' @version 1.03 20181120 adapt to github/laubblatt/2018_DiurnalEvaporation/
+#' @version 1.04 20190115 adapt for final figures
 
 #' @DONE figure 1 must be updated with the panel labeling in keynote, or using latex instead
 
@@ -16,7 +17,7 @@
 
 pfig=~/bgc/github/laubblatt/2018_DiurnalEvaporation/figures/
 # pfigms=~/bgc/ownCloud/work/manuscripts_mr/M28_diurnalHysteresis/CAOSIISynthesisET/draft/HESSD/revision1/figures
-pfigrev=~/bgc/ownCloud/work/manuscripts_mr/M28_diurnalHysteresis/CAOSIISynthesisET/draft/HESSD/revision1/manuscript_revised
+pfigrev=~/bgc/ownCloud/work/manuscripts_mr/M28_diurnalHysteresis/CAOSIISynthesisET/draft/HESSD/final/figures/
 # echo $pfigms
 # ls $pfigms
 # ls $pfig/fig*
@@ -53,6 +54,9 @@ cp fig01_M28_sketch_panels.png $pfigrev/fig01.png
 # pdftoppm -singlefile -rx 450 -ry 450 -png fig02_EC_Site_PetitNobressart.pdf  fig02_EC_Site_PetitNobressart
 # cp fig02_EC_Site_PetitNobressart.pdf $pfigrev/fig02.pdf
 # cp fig02_EC_Site_PetitNobressart.png $pfigrev/fig02.png
+
+cp ~/bgc/ownCloud/work/manuscripts_mr/M28_diurnalHysteresis/CAOSIISynthesisET/draft/HESSD/revision1/manuscript_revised/fig02.p* $pfigrev
+
 
 ### FIGURE 3 Daily Time series
 pdflatex M28_DailyMoistureObs.tex
@@ -139,3 +143,7 @@ cp fig11_M28_CAOSIIPN_VPDAir_Hysteresis_sunnywetdry.pdf $pfigrev/fig11.pdf
 pdftoppm -singlefile -rx 450 -ry 450 -png fig12_CAOSIIPN_varphase_boxjitterplot_sunnywetdry.pdf fig12_CAOSIIPN_varphase_boxjitterplot_sunnywetdry
 cp fig12_CAOSIIPN_varphase_boxjitterplot_sunnywetdry.png $pfigrev/fig12.png
 cp fig12_CAOSIIPN_varphase_boxjitterplot_sunnywetdry.pdf $pfigrev/fig12.pdf
+
+ls -l $pfigrev
+
+ls -l $pfigrev*.pdf
