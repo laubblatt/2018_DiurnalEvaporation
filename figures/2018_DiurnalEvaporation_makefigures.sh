@@ -147,3 +147,9 @@ cp fig12_CAOSIIPN_varphase_boxjitterplot_sunnywetdry.pdf $pfigrev/fig12.pdf
 ls -l $pfigrev
 
 ls -l $pfigrev*.pdf
+
+#### make a zip file of the pdfs
+cd $pfigrev
+ls *.pdf
+zip ../upload/figures_pdf.zip *.pdf
+ls
