@@ -10,6 +10,11 @@ figures and tables as shown in the scientific manuscript
     in simulating the diurnal cycle of evapotranspiration:
     a case study in Luxembourg" available at https://www.hydrol-earth-syst-sci-discuss.net/hess-2018-310/ .
 
+## Public Release
+
+[![DOI](https://zenodo.org/badge/157709058.svg)](https://doi.org/10.5281/zenodo.2540691)
+
+
 ## Instructions
 
 Clone this project with git
