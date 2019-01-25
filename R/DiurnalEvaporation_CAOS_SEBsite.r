@@ -1036,6 +1036,7 @@ legend("topleft", c(expression("Surface Temperature "*T[s]), expression("Air Tem
 
 ## wet panel
 dat = dtsebwide_byhouravg_sunnywetdry[wetdry == "wet", ]
+op = par(mar = c(4,2,3,3.5), las = 1, mgp = c(1.5,0.15,0), tck = 0.01,pty = "sq")
 plot(dm_AirTemperature_ObsEC  ~ IncomingShortwave_ObsEC , data = dat ,type = "l", ylim = lims, xlab = labRsd, ylab = "")
 grid()
 title("wet", line = 0.3)

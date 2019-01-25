@@ -18,9 +18,11 @@
 pfig=~/bgc/github/laubblatt/2018_DiurnalEvaporation/figures/
 # pfigms=~/bgc/ownCloud/work/manuscripts_mr/M28_diurnalHysteresis/CAOSIISynthesisET/draft/HESSD/revision1/figures
 pfigrev=~/bgc/ownCloud/work/manuscripts_mr/M28_diurnalHysteresis/CAOSIISynthesisET/draft/HESSD/final/figures/
+pfigproof2=~/bgc/ownCloud/work/manuscripts_mr/M28_diurnalHysteresis/CAOSIISynthesisET/draft/HESSD/final/proofreading2/
 # echo $pfigms
 # ls $pfigms
 # ls $pfig/fig*
+# ls $pfigproof2
 
 ## go to current directory where figs should be save to
 cd $pfig
@@ -122,6 +124,7 @@ pdfcrop M28_CAOSIIPN_Temperatures_Hysteresis_sunnywetdry.pdf fig09_M28_CAOSIIPN_
 pdftoppm -singlefile -rx 450 -ry 450 -png fig09_M28_CAOSIIPN_Temperatures_Hysteresis_sunnywetdry.pdf fig09_M28_CAOSIIPN_Temperatures_Hysteresis_sunnywetdry
 cp fig09_M28_CAOSIIPN_Temperatures_Hysteresis_sunnywetdry.png $pfigrev/fig09.png
 cp fig09_M28_CAOSIIPN_Temperatures_Hysteresis_sunnywetdry.pdf $pfigrev/fig09.pdf
+cp fig09_M28_CAOSIIPN_Temperatures_Hysteresis_sunnywetdry.pdf $pfigproof2/fig09.pdf
 
 
 ## FIGURE 10 ga wetdry
