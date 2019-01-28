@@ -1,12 +1,13 @@
-#' Reproduce Figures and Tables presented for manuscript Renner et al., 2018 under review for HESS
+#' Reproduce Figures and Tables presented for manuscript Renner et al., 2019, HESS
 #' 
 #' Analysis of the diurnal hysteresis of meteorological variables measured and modeled 
 #' at CAOSII SEB site Petit Nobressart, Luxembourg in 2015
 
-#' @references Renner et al., 2018 "Estimating and understanding model bias
-#'     in simulating the diurnal cycle of evapotranspiration:
-#'         a case study in Luxembourg" 
-#'         available at https://www.hydrol-earth-syst-sci-discuss.net/hess-2018-310/.
+#' @references 
+#' Renner, M., Brenner, C., Mallick, K., Wizemann, H.-D., Conte, L., Trebs, I., Wei, J., Wulfmeyer, V., Schulz, K., and Kleidon, A.: 
+#' Using phase lags to evaluate model biases in simulating the diurnal cycle of evapotranspiration: a case study in Luxembourg,
+#'  Hydrol. Earth Syst. Sci., 23, 515-535,
+#'   https://doi.org/10.5194/hess-23-515-2019, 2019.
 #'         
 #' @filename DiurnalEvaporation_CAOS_SEBsite.r
 #' @author mrenner[at]bgc-jena.mpg.de
