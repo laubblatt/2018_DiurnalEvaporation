@@ -1,14 +1,11 @@
-# Reproduce figures and tables of Renner et al., 2018
+# Reproduce figures and tables of Renner et al., 2019
 
 **_By Maik Renner, Max-Planck Institute for Biogeochemistry, Jena, Germany_**
-> 2019-01-15
+> 2019-01-28
 
 This repository provides the R script to perform data analysis and reproduce
 figures and tables as shown in the scientific manuscript
-    accepted in the journal Hydrology and Earth System Sciences
-    as Renner et al., 2018 "Estimating and understanding model bias
-    in simulating the diurnal cycle of evapotranspiration:
-    a case study in Luxembourg" available at https://www.hydrol-earth-syst-sci-discuss.net/hess-2018-310/ .
+    Renner et al., 2019 "Using phase lags to evaluate model biases in simulating the diurnal cycle of evapotranspiration: a case study in Luxembourg" Hydrology and Earth System Sciences 23, 515-535, available at https://doi.org/10.5194/hess-23-515-2019
 
 ## Public Release
 
