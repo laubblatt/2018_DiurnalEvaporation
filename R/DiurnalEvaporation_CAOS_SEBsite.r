@@ -35,6 +35,7 @@
 #' @version v1.10 2018-11-15 clean script and linked to package phaselag for all functions 
 #' @version v1.10 2018-11-15 prepare for github.com/laubblatt/2018_DiurnalEvaporation
 #' @version v1.11 2019-01-15 download datasets from doi GFZ
+#' @version v1.12 2019-04-25 bugfix with new version of REddyProc (1.0 --> 1.2) providing the function to calculate Potential Solar radiation (change Argument) Thanks to Claire Brenner!
 
 
 # R
@@ -68,7 +69,7 @@ if (! file.exists(paste0(pinputdata,"dtseb_Mod.csv"))) {
 library(data.table)
 library(lattice)
 library(latticeExtra)
-library(REddyProc)
+library(REddyProc) ## use version >= 1.2
 library(knitr) # kable()
 library(kableExtra)
 
@@ -181,7 +182,7 @@ dtsebwide[ , sair := Magnus_Alduchov1996Improved_slope_sat(AirTemperature_ObsEC-
 dtsebwide[ , LEPT := 1.26 * sair / (sair + 65) * (AE_ObsEC)]
 dtsebwide[hour(Time) == 12 , .(LEPT,LatentHeatFlux_ObsEC)]
 # potential Radiation
-dtsebwide[ , Rsdpot := fCalcPotRadiation(DoY.V.n = yday(Date), Time/3600, 49.779, 5.803, TimeZone = +0)]
+dtsebwide[ , Rsdpot := fCalcPotRadiation(DoY = yday(Date), Time/3600, 49.779, 5.803, TimeZone = +0)]
 
 dtsebwide[ , LE_AEmH := (NetRadiation_ObsEC - SoilHeatFlux_ObsEC)-SensibleHeatFlux_ObsEC]
 dtsebwide[ , SoilMoisture_ObsEC := (SoilMoisture_5cm_ObsEC * 100 + SoilMoisture_15cm_ObsEC * 100 + SoilMoisture_30cm_ObsEC * 100) / (300) ]
